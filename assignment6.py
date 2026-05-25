@@ -1,39 +1,39 @@
-# import requests
+import requests
 
-# def weather_data(city):
+def weather_data(city):
 
-#     url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=ddf7424369f83dd8a744e254f0f88c66&units=metric"
+    url = f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid=ddf7424369f83dd8a744e254f0f88c66&units=metric"
 
-#     try:
-#         response = requests.get(url)
-#         response.raise_for_status()
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
 
-#         data = response.json()
+        data = response.json()
 
-#         print("\n------ Weather Report ------")
+        print("\n------ Weather Report ------")
 
-#         print("City :", data['name'])
-#         print("Country :", data['sys']['country'])
+        print("City :", data['name'])
+        print("Country :", data['sys']['country'])
 
-#         print("Temperature :", data['main']['temp'], "°C")
-#         print("Feels Like :", data['main']['feels_like'], "°C")
+        print("Temperature :", data['main']['temp'], "°C")
+        print("Feels Like :", data['main']['feels_like'], "°C")
 
-#         print("Minimum Temp :", data['main']['temp_min'], "°C")
-#         print("Maximum Temp :", data['main']['temp_max'], "°C")
+        print("Minimum Temp :", data['main']['temp_min'], "°C")
+        print("Maximum Temp :", data['main']['temp_max'], "°C")
 
-#         print("Humidity :", data['main']['humidity'], "%")
-#         print("Pressure :", data['main']['pressure'], "hPa")
+        print("Humidity :", data['main']['humidity'], "%")
+        print("Pressure :", data['main']['pressure'], "hPa")
 
-#         print("Weather :", data['weather'][0]['main'])
-#         print("Description :", data['weather'][0]['description'])
+        print("Weather :", data['weather'][0]['main'])
+        print("Description :", data['weather'][0]['description'])
 
-#         print("Wind Speed :", data['wind']['speed'], "m/s")
+        print("Wind Speed :", data['wind']['speed'], "m/s")
 
-#     except requests.exceptions.RequestException as e:
-#         print("Error :", e)
+    except requests.exceptions.RequestException as e:
+        print("Error :", e)
 
-# city = input("Enter the city : ")
-# weather_data(city)
+city = input("Enter the city : ")
+weather_data(city)
 
 
 
